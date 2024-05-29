@@ -1,0 +1,38 @@
+@use '../Variables/Variables.scss' as *;
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: $mobile-padding;
+}
+
+.header__logo{
+    width:8rem;
+}
+.header__mid{
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.header__input{
+    width: 90%;
+}
+
+.header__img{
+    height: 2.5rem;
+	width: 2.5rem;
+	border-radius: 2.5rem;
+}
+
+.header__btn{
+    background: $primary-color-blue;
+    color: $primary-color-white;
+    border-radius:  .25rem;
+    border: 1rem;
+    width: 100%;
+    height: 5vh;
+}
