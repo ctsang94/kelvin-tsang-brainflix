@@ -13,8 +13,8 @@ const VideoPlayer = ({activeVideo}) => {
         <article className='video__stats'>
             <h2 className='video__author'>{activeVideo.channel}</h2>
             <span className='video__views'>{activeVideo.views}</span>
-            <span className='video__date'>{activeVideo.timestamp.toLocaleString()}</span>
-            <span className='video__likes'>22,479</span>
+            <span className='video__date'>{activeVideo.timestamp}</span>
+            <span className='video__likes'>{activeVideo.likes}</span>
         </article>
         <p className='video__description'>{activeVideo.description}</p>
         </>

@@ -1,6 +1,53 @@
+@use '../../styles/partials/Variables.scss' as *;
+@use '../../styles/partials/mixins.scss' as *;
 
 .comment__img{
     height: 2.5rem;
 	width: 2.5rem;
 	border-radius: 2.5rem;
+}
+
+.comment__containerFeed {
+	width: 100%;
+	padding: 1rem 0;
+	display: flex;
+	flex-direction: row;
+	border-bottom: 0.125rem solid $secondary-color-mercury;
+}
+
+.comment__card {
+	width: 80%;
+	padding-left: 2rem;
+	@include tablet{
+		width: 100%;
+	}
+}
+
+.comment__card--top {
+	display: flex;
+	justify-content: space-between;
+	@include tablet{
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.comment__username{
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+.comment__date{
+	font-size: 1.25rem;
+	color: silver;
+}
+
+.comment__descriptions{
+	font-size: 1.25rem;
+	font-weight: 600;
+	line-height: 2rem;
+	text-wrap: wrap;
+	hyphens: auto;
+	word-wrap: break-word;
+	word-break: break-all;
 }

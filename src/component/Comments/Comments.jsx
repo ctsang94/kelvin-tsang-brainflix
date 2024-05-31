@@ -2,7 +2,7 @@ import './Comments.scss'
 import UserImage from "../../assets/Images/Mohan-muruge.jpg";
 import Video from '../../Data/video-details.json'
 
-const Comments = ({sharedState}) => {
+const Comments = ({activeVideo}) => {
     return (
         <>
             <section className='comment__submission'>
@@ -13,11 +13,15 @@ const Comments = ({sharedState}) => {
                 <button className='comment__btn'>COMMENT</button>
             </section>
 
-            <section>
+            <section className='comment__containerFeed'>
                 <img className='comment__img' src={UserImage}></img>
-                <h2 className='comment__username'>{Video[0].comments[0].name}</h2>
-                <span className='comment__date'>8/11/2023</span>
-                <p className='comment__description'>Your insights into the future of AI are enlightening! The intersection of technology and ethics is particularly thought-provoking. Keep us updated on the tech front!</p>
+                <div className='comment__card'>
+                    <div className='comment__card--top'>
+                        <h2 className='comment__username'>{Video[0].comments[0].name}</h2>
+                        <span className='comment__date'>8/11/2023</span>
+                    </div>
+                    <p className='comment__card--bottom comment__description'>Your insights into the future of AI are enlightening! The intersection of technology and ethics is particularly thought-provoking. Keep us updated on the tech front!</p>
+                </div>
             </section>
         </>
     )
