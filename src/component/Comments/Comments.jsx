@@ -4,6 +4,7 @@ import userIcon from '../../assets/Icons/add_comment.svg';
 import Video from "../../Data/video-details.json";
 
 const Comments = ({ activeVideo }) => {
+
   return (
     <>
       <section className="comments">
@@ -32,23 +33,25 @@ const Comments = ({ activeVideo }) => {
 
           {activeVideo.comments.map((comment) =>
           <>
-            <div className="comments__container--left">
-            <img
-            className="comments__img"
-            src={UserImage}
-            alt="User avatar">
+            <section className='comments__container--individual'>
+              <div className="comments__container--left">
+                <img
+                  className="comments__img"
+                  src={UserImage}
+                  alt="User avatar">
+                </img>
+              </div>
 
-            </img>
-            </div>
-            <div className="comments__card">
+              <div className="comments__container--right">
                 <div className="comments__card--top">
-                    <h2 className="comments__username">{comment.name}</h2>
-                    <span className="comments__date">{comment.timestamp}</span>
+                  <h2 className="comments__username">{comment.name}</h2>
+                  <span className="comments__date">{comment.timestamp}</span>
                 </div>
                 <p className="comments__card--bottom comments__description">{
-                comment.comment}
+                  comment.comment}
                 </p>
-            </div>
+              </div>
+            </section>
           </>
           )}
 
