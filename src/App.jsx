@@ -1,4 +1,5 @@
 import './App.css'
+import './styles/partials/global.scss'
 import Header from './component/Header/Header.jsx'
 import VideoPlayer from './component/VideoPlayer/VideoPlayer.jsx'
 import Comments from "./component/Comments/Comments.jsx"

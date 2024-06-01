@@ -1,4 +1,40 @@
-.video {
+@use '../../styles/partials/Variables.scss' as *;
+
+.videoplayer {
     width: 100%;
     height: 90%;
 }
+
+.video{
+    padding: $mobile-padding;
+    display: flex;
+    flex-direction: column;
+    &__stats--top{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        .video__author{
+            width: 50%;
+          
+        }
+        .video__views{
+            width: 50%;
+          
+        }
+    }
+
+    &__stats--bottom{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        .video__date{
+            width: 50%;
+           
+        }
+        .video__likes{
+            width: 50%;
+            
+        }
+    }
+}
+
