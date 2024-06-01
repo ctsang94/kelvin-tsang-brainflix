@@ -1,4 +1,5 @@
 @use '../../styles/partials/Variables.scss' as *;
+@use '../../styles/partials/mixins.scss' as *;
 
 .videoplayer {
     width: 100%;
@@ -10,17 +11,28 @@
     padding: $mobile-padding;
     display: flex;
     flex-direction: column;
+    @include tablet{
+        padding: $tablet-padding;
+    }
     &__stats{
         padding: 1rem 0;
         border-top: .15rem solid $secondary-color-mercury;
         border-bottom: .15rem solid $secondary-color-mercury;
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
     &__stats--top{
         display: flex;
         justify-content: start;
         align-items: center;
         padding-bottom: 1rem;
-
+        @include tablet{
+            width: 50%;
+            padding-bottom: 0;
+        }
         .video__author{
             width: 50%;
         }
@@ -34,6 +46,9 @@
         display: flex;
         justify-content: start;
         align-items: center;
+        @include tablet{
+            width: 50%;
+        }
         .video__date{
             color: $primary-color-silver;
             width: 50%;
