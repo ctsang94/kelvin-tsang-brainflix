@@ -5,6 +5,11 @@ import Video from "../../Data/video-details.json";
 
 const Comments = ({ activeVideo }) => {
 
+  const formatDate = (timestamp) => {
+    const date = new Date(timestamp);
+    return date.toLocaleDateString();
+  };
+
   return (
     <>
       <section className="comments">
@@ -45,7 +50,7 @@ const Comments = ({ activeVideo }) => {
               <div className="comments__container--right">
                 <div className="comments__card--top">
                   <h2 className="comments__username">{comment.name}</h2>
-                  <span className="comments__date">{comment.timestamp}</span>
+                  <span className="comments__date">{formatDate(comment.timestamp)}</span>
                 </div>
                 <p className="comments__card--bottom comments__description">{
                   comment.comment}
