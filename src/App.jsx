@@ -15,9 +15,9 @@ function App() {
       <Header />
       <VideoPlayer activeVideo={activeVideo}/>
       <Comments activeVideo={activeVideo}/>
-      <VideoList 
-        setActiveVideo={setActiveVideo} 
-        activeVideo={activeVideo} 
+      <VideoList
+        setActiveVideo={setActiveVideo}
+        activeVideo={activeVideo}
         videoData={videoData}
       />
     </>

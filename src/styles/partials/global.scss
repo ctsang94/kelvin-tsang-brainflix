@@ -3,13 +3,17 @@
 
 h1{
     font-size: $mobile-h1-font;
-    font-family: 'AvenirNextLTPro';
+    font-family: 'AvenirNextLTPro-Regular';
     font-style: normal;
     font-weight: 700;
 }
 
 h2, h3, h4{
-    font-family:'AvenirNextLTPro', 'Times New Roman', Times, serif;
+    font-family: 'AvenirNextLTPro-Regular', 'Times New Roman', Times, serif;
     font-size: $mobile-h2-font;
     font-weight: 500;
+}
+
+p{
+    font-family: 'AvenirNextLTPro-Regular';
 }

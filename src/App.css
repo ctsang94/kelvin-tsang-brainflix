@@ -1,6 +1,8 @@
+
 body {
   margin:0;
   padding: 0;
+  font-family: 'AvenirNextLTPro-Regular';
 }
 
 main, section, article{
@@ -18,4 +20,3 @@ main, section, article{
 *::after {
   box-sizing: border-box;
 }
-
