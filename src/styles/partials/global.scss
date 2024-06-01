@@ -1,7 +1,15 @@
 @use '../../styles/partials/typography.scss' as *;
+@use '../../styles/partials/Variables.scss' as *;
 
 h1{
+    font-size: $mobile-h1-font;
     font-family: 'AvenirNextLTPro';
     font-style: normal;
     font-weight: 700;
+}
+
+h2{
+    font-family: 'AvenirNextLTPro';
+    font-size: $mobile-h2-font;
+    font-weight: 500;
 }

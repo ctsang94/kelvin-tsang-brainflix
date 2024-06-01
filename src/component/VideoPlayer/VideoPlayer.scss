@@ -6,35 +6,46 @@
 }
 
 .video{
+    font-family: $primary-font;
     padding: $mobile-padding;
     display: flex;
     flex-direction: column;
+    &__stats{
+        padding: 1rem 0;
+        border-top: .15rem solid $secondary-color-mercury;
+        border-bottom: .15rem solid $secondary-color-mercury;
+    }
     &__stats--top{
         display: flex;
         justify-content: start;
         align-items: center;
+        padding-bottom: 1rem;
+
         .video__author{
             width: 50%;
-          
         }
         .video__views{
+            color: $primary-color-silver;
             width: 50%;
-          
+            padding-left: .5rem;
         }
     }
-
     &__stats--bottom{
         display: flex;
         justify-content: start;
         align-items: center;
         .video__date{
+            color: $primary-color-silver;
             width: 50%;
-           
         }
         .video__likes{
+            color: $primary-color-silver;
             width: 50%;
-            
+            padding-left: .5rem;
         }
     }
+    &__description{
+        padding: $mobile-padding 0;
+        line-height: 2rem;
+    }
 }
-
