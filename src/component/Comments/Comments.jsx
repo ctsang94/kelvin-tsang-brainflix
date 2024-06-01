@@ -1,30 +1,61 @@
-import './Comments.scss'
+import "./Comments.scss";
 import UserImage from "../../assets/Images/Mohan-muruge.jpg";
-import Video from '../../Data/video-details.json'
+import userIcon from '../../assets/Icons/add_comment.svg';
+import Video from "../../Data/video-details.json";
 
-const Comments = ({activeVideo}) => {
-    return (
-        <>
-            <section className='comment__submission'>
-                <h2 className='comment__count'> 3 Comments</h2>
-                <h2 className='comment__title'>JOIN THE CONVERSATION</h2>
-                <img className='comment__img' src={UserImage}></img>
-                <input className='comment__input' placeholder="Add a new comment"></input>
-                <button className='comment__btn'>COMMENT</button>
-            </section>
+const Comments = ({ activeVideo }) => {
+  return (
+    <>
+      <section className="comments">
+        <h2 className="comments__count">
+          {activeVideo.comments.length} Comments
+        </h2>
+        <article className="comments__submission">
+          <div className="comments__submission--left">
+            <img
+              className="comments__img"
+              src={UserImage}
+              alt="User avatar"
+            ></img>
+          </div>
+          <div className="comments__submission--right">
+            <h2 className="comments__title">JOIN THE CONVERSATION</h2>
+            <input
+              className="comments__input"
+              placeholder="Add a new comment"
+            ></input>
+            <button className="comments__btn"><img className='comments__btn--icon' src={userIcon}></img>COMMENT</button>
+          </div>
+        </article>
 
-            <section className='comment__containerFeed'>
-                <img className='comment__img' src={UserImage}></img>
-                <div className='comment__card'>
-                    <div className='comment__card--top'>
-                        <h2 className='comment__username'>{Video[0].comments[0].name}</h2>
-                        <span className='comment__date'>8/11/2023</span>
-                    </div>
-                    <p className='comment__card--bottom comment__description'>Your insights into the future of AI are enlightening! The intersection of technology and ethics is particularly thought-provoking. Keep us updated on the tech front!</p>
+        <article className="comments__container">
+
+          {activeVideo.comments.map((comment) =>
+          <>
+            <div className="comments__container--left">
+            <img
+            className="comments__img"
+            src={UserImage}
+            alt="User avatar">
+
+            </img>
+            </div>
+            <div className="comments__card">
+                <div className="comments__card--top">
+                    <h2 className="comments__username">{comment.name}</h2>
+                    <span className="comments__date">{comment.timestamp}</span>
                 </div>
-            </section>
-        </>
-    )
-}
+                <p className="comments__card--bottom comments__description">{
+                comment.comment}
+                </p>
+            </div>
+          </>
+          )}
 
-export default Comments
+        </article>
+      </section>
+    </>
+  );
+};
+
+export default Comments;
