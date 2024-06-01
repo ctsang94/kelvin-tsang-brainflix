@@ -8,8 +8,8 @@ h1{
     font-weight: 700;
 }
 
-h2{
-    font-family: 'AvenirNextLTPro';
+h2, h3, h4{
+    font-family:'AvenirNextLTPro', 'Times New Roman', Times, serif;
     font-size: $mobile-h2-font;
     font-weight: 500;
 }
