@@ -11,7 +11,7 @@
   @include tablet {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 0 $tablet-padding;
   }
   @include desktop{
@@ -23,6 +23,10 @@
   width: 8rem;
   @include tablet {
     height: 4rem;
+    margin-right: 8rem;
+  }
+  @include desktop{
+    margin-right: 18rem;
   }
 }
 .header__mid {
@@ -47,6 +51,7 @@
   border-radius: 0.25rem;
   border-color: $primary-color-silver;
   background-color: $secondary-color-alabaster;
+
 }
 
 .header__img {
