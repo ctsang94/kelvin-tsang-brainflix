@@ -2,8 +2,29 @@ import "./Comments.scss";
 import UserImage from "../../assets/Images/Mohan-muruge.jpg";
 import userIcon from '../../assets/Icons/add_comment.svg';
 import Video from "../../Data/video-details.json";
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const Comments = ({ activeVideo }) => {
+    // const baseUrl = 'https://unit-3-project-api-0a5620414506.herokuapp.com/'
+    // const apiKey = '02a32350-3224-4f83-8c80-acd743ebc544'
+
+    // const {videoId} = useParams();
+
+    // const [ videoComments, setVideoComments] = useState({})
+
+    // const fetchVideoComments = async() =>{
+    //     const commentsResponse = await axios(`${baseUrl}videos/${videoId}?api_key=${apiKey}`)
+    //     console.log(commentsResponse.data)
+    //     setVideoComments(commentsResponse.data)
+    // }
+    
+    // fetchVideoComments()
+    
+    // useEffect(()=>{
+    //     fetchVideoComments();
+    // }, [])
 
   const formatDate = (timestamp) => {
     const date = new Date(timestamp);
@@ -14,7 +35,7 @@ const Comments = ({ activeVideo }) => {
     <>
       <section className="comments">
         <h2 className="comments__count">
-          {activeVideo.comments.length} Comments
+          {/* {videoComments.comments.length} Comments */}
         </h2>
 
         <article className="comments__submission">

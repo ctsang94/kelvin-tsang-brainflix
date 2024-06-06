@@ -28,7 +28,7 @@ const HomePage = () => {
             <VideoPlayer activeVideo={activeVideo} />
             <div className='desktop__view'>
                 <div className='desktop__view--left'>
-                    <VideoDetails activeVideo={activeVideo} />
+                    <VideoDetails />
                     <Comments activeVideo={activeVideo} />
                 </div>
                 <VideoList className='desktop__view--right'
