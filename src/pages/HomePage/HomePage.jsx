@@ -4,7 +4,6 @@ import VideoPlayer from "../../component/VideoPlayer/VideoPlayer";
 import VideoDetails from "../../component/VideoDetails/VideoDetails";
 import Comments from "../../component/Comments/Comments";
 import VideoList from "../../component/VideoList/VideoList";
-import videoData from '../../Data/video-details.json';
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
@@ -17,7 +16,7 @@ const HomePage = () => {
     
     const fetchVideo = async() =>{
         try {
-            const videos = await axios(`${baseUrl}videos/${videoId ? videoId : '84e96018-4022-434e-80bf-000ce4cd12b8'}?api_key=${apiKey}`)
+            const videos = await axios(`${baseUrl}videos/${videoId?videoId:'84e96018-4022-434e-80bf-000ce4cd12b8'}?api_key=${apiKey}`)
             setActiveVideo(videos.data)
             console.log(videos.data)
         }catch (error){
