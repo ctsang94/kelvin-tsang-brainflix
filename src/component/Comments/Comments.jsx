@@ -21,7 +21,7 @@ const Comments = ({ activeVideo }) => {
             <img
               className="comments__img"
               src={UserImage}
-              alt="User avatar"
+              alt="avatar-image"
             ></img>
           </div>
           <div className="comments__submission--right">
@@ -34,7 +34,7 @@ const Comments = ({ activeVideo }) => {
             </div>
             <a className="comments__btn">
               <button className="comments__btn">
-                <img className='comments__btn--icon' src={userIcon}/>
+                <img className='comments__btn--icon' src={userIcon} alt='add-comment-icon'/>
                 <span className='comments__btn--text'>COMMENT</span>
               </button>
             </a>
@@ -50,7 +50,7 @@ const Comments = ({ activeVideo }) => {
                 <img
                   className="comments__img"
                   src={UserImage}
-                  alt="User avatar">
+                  alt="avatar-image">
                 </img>
               </div>
 

@@ -11,7 +11,7 @@ const VideoList = ({activeVideo, videoList}) => {
             .map(video =>
                 <Link to={`/videos/${video.id}`}><section key={video.id} className='video__container'>
                     <article className='video__individual'>
-                        <img className='video__img' src={video.image} />
+                        <img className='video__img' src={video.image} alt='video-image'/>
                         <div className='video__details'>
                             <h3 className='video__title'>{video.title}</h3>
                             <h4 className='video__channel'>{video.channel}</h4>
