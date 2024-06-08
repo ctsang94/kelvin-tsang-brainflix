@@ -121,23 +121,24 @@
     @include tablet{
       width: 100%;
     }
+
+    .comments__card--top {
+      display: flex;
+      justify-content: space-between;
+
+      .comments__username {
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+
+      .comments__date {
+        font-size: 1.25rem;
+        color: silver;
+      }
+    }
   }
 }
 
-.comments__card--top {
-  display: flex;
-  justify-content: space-between;
-}
-
-.comments__username {
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-.comments__date {
-  font-size: 1.25rem;
-  color: silver;
-}
 
 .comments__description {
   padding-top: 1rem;

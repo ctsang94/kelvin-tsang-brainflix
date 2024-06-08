@@ -46,15 +46,15 @@ const Comments = ({ activeVideo }) => {
           {activeVideo.comments.map((comment) =>
           <>
             <section className='comments__container--individual'>
-              <div className="comments__container--left">
+              <article className="comments__container--left">
                 <img
                   className="comments__img"
                   src={UserImage}
                   alt="avatar-image">
                 </img>
-              </div>
+              </article>
 
-              <div className="comments__container--right">
+              <article className="comments__container--right">
                 <div className="comments__card--top">
                   <h2 className="comments__username">{comment.name}</h2>
                   <span className="comments__date">{formatDate(comment.timestamp)}</span>
@@ -62,7 +62,7 @@ const Comments = ({ activeVideo }) => {
                 <p className="comments__card--bottom comments__description">{
                   comment.comment}
                 </p>
-              </div>
+              </article>
             </section>
           </>
           )}
