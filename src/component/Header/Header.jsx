@@ -8,10 +8,15 @@ const Header = () => {
         <header className="header">
             <a href='/'><img className='header__logo' src={logoImage}></img></a>
             <div className='header__mid'>
-                <input className='header__input' placeholder='Search'></input>
-                <img className='header__img' src={headerImage}></img>
+                <input className='header__mid--input' placeholder='Search'></input>
+                <img className='header__mid--img' src={headerImage}></img>
             </div>
-            <a href='/upload'><button className='header__btn'><img className='header__btn--icon' src={iconImage}></img>UPLOAD</button></a>
+            <a href='/upload' className='header__btn'>
+                <button className='header__btn'>
+                    <img className='header__btn--icon' src={iconImage} />
+                    <span className='header__btn--text'>UPLOAD</span>
+                </button>
+            </a>
             <img className='header__img--tablet' src={headerImage}></img>
         </header>
     )
