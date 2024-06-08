@@ -3,7 +3,7 @@ import UserImage from "../../assets/Images/Mohan-muruge.jpg";
 import userIcon from '../../assets/Icons/add_comment.svg';
 
 const Comments = ({ activeVideo }) => {
- 
+
   const formatDate = (timestamp) => {
     const date = new Date(timestamp);
     return date.toLocaleDateString();
@@ -32,7 +32,12 @@ const Comments = ({ activeVideo }) => {
                 placeholder="Add a new comment"
               ></input>
             </div>
-            <button className="comments__btn"><img className='comments__btn--icon' src={userIcon}></img>COMMENT</button>
+            <a className="comments__btn">
+              <button className="comments__btn">
+                <img className='comments__btn--icon' src={userIcon}/>
+                <span className='comments__btn--text'>COMMENT</span>
+              </button>
+            </a>
           </div>
         </article>
 
