@@ -1,8 +1,16 @@
 import './UploadForm.scss';
 import image from '../../assets/Images/Upload-video-preview.jpg'
 import iconImage from '../../assets/Icons/publish.svg'
+import { useNavigate } from 'react-router-dom';
 
 const UploadForm = () => {
+
+    let navigate = useNavigate()
+    const routeChange = () => {
+        alert("You've upload the video!")
+        navigate('/')
+    }
+
     return (
         <>
             <div className='upload__container'>
@@ -19,7 +27,7 @@ const UploadForm = () => {
                         <input className='form__mid--input' placeholder="Add a description to your video"></input>
                     </div>
                     <div className='form__bot'>
-                        <button className='form__bot--publish'><img className='form__bot--icon' src={iconImage} alt='publish-icon' />PUBLISH</button>
+                        <button onClick={routeChange} className='form__bot--publish'><img className='form__bot--icon' src={iconImage} alt='publish-icon' />PUBLISH</button>
                         <button className='form__bot--cancel'>CANCEL</button>
                     </div>
                 </form>
