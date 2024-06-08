@@ -9,33 +9,33 @@
     @include desktop{
         padding-top: 1rem;
     }
+    .video__next{
+        color: $primary-color-silver;
+        padding-bottom: $mobile-padding;
+    }
+    .video__container{
+        display:flex;
+        .video__individual{
+            display: flex;
+            padding-bottom: 1rem;
+            .video__img{
+                width: 30%;
+                border-radius: .25rem;
+            }
 
-}
-.video__next{
-    color: $primary-color-silver;
-    padding-bottom: $mobile-padding;
-}
-.video__container{
-    display:flex;
-}
-.video__individual{
-    display: flex;
-    padding-bottom: 1rem;
-}
+            .video__detail{
+                padding-left: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                color: $primary-color-black;
+                &--title{
+                    font-weight: 700;
+                }
+            }
 
-.video__img{
-    width: 30%;
-    border-radius: .25rem;
-}
+        }
 
-.video__details{
-    padding-left: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: $primary-color-black;
-}
+    }
 
-.video__title{
-    font-weight: 700;
 }
