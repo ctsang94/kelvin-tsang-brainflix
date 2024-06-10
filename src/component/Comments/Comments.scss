@@ -5,13 +5,22 @@
 .comments {
   padding: $mobile-padding;
   padding-top: 0;
-@include tablet{
-  padding: 0 $tablet-padding;
-  padding-bottom: $tablet-padding;
-}
+  @include tablet{
+    padding: 0 $tablet-padding;
+    padding-bottom: $tablet-padding;
+  }
 
   &__count {
     padding-bottom: $mobile-padding;
+  }
+
+  &__title{
+      color: $primary-color-silver;
+      font-weight: 600;
+      padding-left: 5.5rem;
+      @include desktop{
+        padding-left: 3.5rem;
+      }
   }
   &__img {
     height: 3rem;
@@ -38,13 +47,7 @@
       align-items: center;
       width: 100%;
       }
-      .comments__title {
-        color: $primary-color-silver;
-        font-weight: 600;
-        @include tablet{
-          display: none;
-        }
-      }
+      
       .comments__input {
         background-color: $secondary-color-alabaster;
         padding: 0.75rem;
@@ -58,6 +61,7 @@
         @include tablet{
           height: 2.5rem;
           width: 27rem;
+          margin-bottom: 0;
         }
       }
       ::placeholder {
@@ -77,10 +81,18 @@
         width: 100%;
 
         @include tablet{
-          width: 30%;
+        margin-left: 1rem;
         }
+        @include desktop{
+          width: 100%;
+          padding-right: 1rem;
+        }
+
         &--icon{
           padding-left: .5rem;
+          @include desktop{
+            padding-left: 0;
+          }
         }
 
         &--text{
@@ -88,6 +100,9 @@
           font-size: 1rem;
           font-weight: 500;
           color: $secondary-color-alabaster;
+          @include desktop{
+            padding-left: 1rem;
+          }
         }
       }
     }

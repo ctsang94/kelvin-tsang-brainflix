@@ -15,7 +15,7 @@ const Comments = ({ activeVideo }) => {
         <h2 className="comments__count">
           {activeVideo.comments.length} Comments
         </h2>
-
+        <h2 className="comments__title">JOIN THE CONVERSATION</h2>
         <article className="comments__submission">
           <div className="comments__submission--left">
             <img
@@ -26,7 +26,7 @@ const Comments = ({ activeVideo }) => {
           </div>
           <div className="comments__submission--right">
             <div className='comments__group'>
-              <h2 className="comments__title">JOIN THE CONVERSATION</h2>
+              {/* <h2 className="comments__title">JOIN THE CONVERSATION</h2> */}
               <input
                 className="comments__input"
                 placeholder="Add a new comment"
