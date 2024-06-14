@@ -28,8 +28,7 @@ const UploadForm = () => {
             image: 'http://localhost:8080/images/image0.jpg'
         }
         await axios.post('http://localhost:8080/videos', videoData);
-        titleRef.current.value = '';
-        descriptionRef.current.value = '';
+        navigate('/');
     }
 
     return (

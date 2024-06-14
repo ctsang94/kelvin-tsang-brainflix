@@ -8,7 +8,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 const HomePage = () => {
-    const baseUrl = 'https://unit-3-project-api-0a5620414506.herokuapp.com/'
+    const baseUrl = 'http://localhost:8080/'
     const apiKey = '02a32350-3224-4f83-8c80-acd743ebc544'
 
     const [activeVideo, setActiveVideo] = useState(null)
