@@ -33,32 +33,36 @@ const UploadForm = () => {
 
     return (
         <>
-            <div className='upload__container'>
+            <section className='upload__container'>
                 <h1 className='upload__title'>Upload Video</h1>
-                <h2 className='upload__thumbnail--title'>VIDEO THUMBNAIL</h2>
-                <img className='upload__img' src={image} alt='thumbnail-image'></img>
-                <form onSubmit={uploadVideo}>
-                    <div className='form__top'>
-                        <label className='form__top--title'>TITLE YOUR VIDEO</label>
-                        <input ref={titleRef} className='form__top--input' placeholder="Add a title to your video"></input>
+                <div className='upload-container__desktop'>
+                    <div className='upload-container__desktop-left'>
+                        <h2 className='upload__thumbnail--title'>VIDEO THUMBNAIL</h2>
+                        <img className='upload__img' src={image} alt='thumbnail-image'></img>
                     </div>
-                    <div className='form__mid'>
-                        <label className='form__mid--description'>ADD A VIDEO DESCRIPTION</label>
-                        <input ref={descriptionRef} className='form__mid--input' placeholder="Add a description to your video"></input>
-                    </div>
-                    <div className='form__bot'>
-                        <button type='submit' onClick={uploadVideo} className='form__bot--publish'>
-                            <span className='form__bot--icon'>
-                                <img src={iconImage} alt='publish-icon' />
-                            </span>
-                            <span className='form__bot--text'>
-                                PUBLISH
-                            </span>
-                        </button>
-                        <button onClick={homeRoute} className='form__bot--cancel'>CANCEL</button>
-                    </div>
-                </form>
-            </div>
+                    <form onSubmit={uploadVideo} className='upload-container__desktop-right'>
+                        <div className='form__top'>
+                            <label className='form__top--title'>TITLE YOUR VIDEO</label>
+                            <input ref={titleRef} className='form__top--input' placeholder="Add a title to your video"></input>
+                        </div>
+                        <div className='form__mid'>
+                            <label className='form__mid--description'>ADD A VIDEO DESCRIPTION</label>
+                            <input ref={descriptionRef} className='form__mid--input' placeholder="Add a description to your video"></input>
+                        </div>
+                    </form>    
+                </div>
+                <div className='form__bot'>
+                            <button type='submit' onClick={uploadVideo} className='form__bot--publish'>
+                                <span className='form__bot--icon'>
+                                    <img src={iconImage} alt='publish-icon' />
+                                </span>
+                                <span className='form__bot--text'>
+                                    PUBLISH
+                                </span>
+                            </button>
+                            <button onClick={homeRoute} className='form__bot--cancel'>CANCEL</button>
+                </div>
+            </section>
         </>
     )
 }
