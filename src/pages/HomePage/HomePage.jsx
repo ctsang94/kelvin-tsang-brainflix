@@ -51,6 +51,7 @@ const HomePage = () => {
     
     return (
         <>
+            <main>
             <VideoPlayer activeVideo={activeVideo} />
             <div className='desktop__view'>
                 <div className='desktop__view--left'>
@@ -62,6 +63,7 @@ const HomePage = () => {
                     videoList={videoList}
                 />
             </div>
+            </main>
         </>
     )
 }

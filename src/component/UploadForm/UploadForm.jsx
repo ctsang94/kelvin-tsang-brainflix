@@ -9,10 +9,7 @@ import { useRef } from 'react';
 const UploadForm = () => {
 
     let navigate = useNavigate()
-    const routeChange = () => {
-        alert("You've upload the video!")
-        navigate('/')
-    }
+    
     const homeRoute = () =>{
         navigate('/')
     }
@@ -28,6 +25,7 @@ const UploadForm = () => {
             image: 'http://localhost:8080/images/image0.jpg'
         }
         await axios.post('http://localhost:8080/videos', videoData);
+        alert("You've upload the video!")
         navigate('/');
     }
 
@@ -35,7 +33,7 @@ const UploadForm = () => {
         <>
             <section className='upload__container'>
                 <h1 className='upload__title'>Upload Video</h1>
-                <div className='upload-container__desktop'>
+                <article className='upload-container__desktop'>
                     <div className='upload-container__desktop-left'>
                         <h2 className='upload__thumbnail--title'>VIDEO THUMBNAIL</h2>
                         <img className='upload__img' src={image} alt='thumbnail-image'></img>
@@ -50,8 +48,8 @@ const UploadForm = () => {
                             <input ref={descriptionRef} className='form__mid--input' placeholder="Add a description to your video"></input>
                         </div>
                     </form>    
-                </div>
-                <div className='form__bot'>
+                </article>
+                <article className='form__bot'>
                             <button type='submit' onClick={uploadVideo} className='form__bot--publish'>
                                 <span className='form__bot--icon'>
                                     <img src={iconImage} alt='publish-icon' />
@@ -61,7 +59,7 @@ const UploadForm = () => {
                                 </span>
                             </button>
                             <button onClick={homeRoute} className='form__bot--cancel'>CANCEL</button>
-                </div>
+                </article>
             </section>
         </>
     )

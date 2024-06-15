@@ -26,6 +26,7 @@
     height: 3rem;
     width: 3rem;
     border-radius: 2.5rem;
+    background-color: $primary-color-silver;
   }
 
   &__submission {
@@ -79,7 +80,7 @@
         justify-content: flex-start;
         align-items: center;
         width: 100%;
-
+        cursor: pointer;
         @include tablet{
         margin-left: 1rem;
         }
