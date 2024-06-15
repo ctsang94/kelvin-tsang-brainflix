@@ -5,21 +5,34 @@
     display:flex;
     flex-direction: column;
     padding: $mobile-padding;
+    @include tablet{
+        padding: $tablet-padding;
+    }
 }
 
 .upload__title{
     font-weight: 700;
     padding-bottom: $mobile-padding;
+    @include tablet{
+        border-bottom: 1px solid $secondary-color-mercury;
+    }
 }
 
 .upload__thumbnail--title{
     color: $primary-color-silver;
     padding-bottom: .5rem;
+    @include tablet{
+        padding-top: $tablet-padding;
+    }
 }
 
 .upload__img{
     width: 100%;
     height: 40%;
+    @include tablet{
+        width: 50%;
+        padding-bottom: $tablet-padding;
+    }
 }
 
 
@@ -27,15 +40,28 @@
     display:flex;
     flex-direction: column;
     padding-bottom: $mobile-padding;
+    // @include tablet{
+    //     padding-bottom: $tablet-padding;
+    // }
     &--title{
         color: $primary-color-silver;
     }
     &--input{
-        height: 2.5rem;
+        background-color: $secondary-color-mercury;
+        padding: 0.75rem;
         border: 1px solid $primary-color-silver;
-        border-radius: .25rem;
-        outline: none;
+        border-radius: 4px;
+        height: 2.5rem;
+        width: 100%;
+        margin-bottom: 1rem;
+        resize: none;
 
+        @include tablet{
+          height: 2.5rem;
+          width: 100%;
+          margin-bottom: 0;
+        }
+      
     }
 }
 .form__mid{
@@ -46,17 +72,32 @@
         color: $primary-color-silver;
     }
     &--input{
-        height: 5rem;
+        background-color: $secondary-color-mercury;
+        padding: 0.75rem;
         border: 1px solid $primary-color-silver;
-        border-radius: .25rem;
-        outline: none;
+        border-radius: 4px;
+        height: 7rem;
+        width: 100%;
+        margin-bottom: 1rem;
+        resize: none;
 
+        @include tablet{
+          width: 100%;
+          margin-bottom: 0;
+        }
     }
 }
 .form__bot{
     display:flex;
     flex-direction: column;
     gap: 1rem;
+    @include tablet{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 50%;
+        margin-left: 50%;
+        
+    }
     &--publish{
         background: $primary-color-blue;
         color: $primary-color-white;
@@ -68,7 +109,15 @@
         align-items: center;
     }
     &--icon{
-        margin-right: 39%;
+       display: flex;
+       justify-content: start;
+       margin-left: 1rem;
+       width: 20%;
+    }
+    &--text{
+        display: flex;
+        justify-content: center;
+        margin-left: 1rem;
     }
 
     &--cancel{
@@ -81,5 +130,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        font-weight: 500;
     }
 }

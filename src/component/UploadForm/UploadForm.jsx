@@ -47,7 +47,14 @@ const UploadForm = () => {
                         <input ref={descriptionRef} className='form__mid--input' placeholder="Add a description to your video"></input>
                     </div>
                     <div className='form__bot'>
-                        <button type='submit' onClick={uploadVideo} className='form__bot--publish'><img className='form__bot--icon' src={iconImage} alt='publish-icon' />PUBLISH</button>
+                        <button type='submit' onClick={uploadVideo} className='form__bot--publish'>
+                            <span className='form__bot--icon'>
+                                <img src={iconImage} alt='publish-icon' />
+                            </span>
+                            <span className='form__bot--text'>
+                                PUBLISH
+                            </span>
+                        </button>
                         <button onClick={homeRoute} className='form__bot--cancel'>CANCEL</button>
                     </div>
                 </form>
