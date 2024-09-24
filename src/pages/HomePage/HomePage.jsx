@@ -8,12 +8,12 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 const HomePage = () => {
-    const baseUrl = 'http://localhost:8080/'
+    const baseUrl = 'https://kelvin-tsang-brainflix-api.onrender.com/'
     const apiKey = '02a32350-3224-4f83-8c80-acd743ebc544'
 
     const [activeVideo, setActiveVideo] = useState(null)
     const {videoId} = useParams();
-    
+
     const fetchVideo = async() =>{
         try {
             const videos = await axios(`${baseUrl}videos/${videoId?videoId:'84e96018-4022-434e-80bf-000ce4cd12b8'}?api_key=${apiKey}`)
@@ -33,7 +33,7 @@ const HomePage = () => {
         }catch (error){
             console.log('Error fetching video list:', error);
         }
-    };    
+    };
 
     useEffect(()=>{
         fetchVideos();
@@ -48,7 +48,7 @@ const HomePage = () => {
             <h1>Sorry.... the page is still loading!</h1>
         )
     }
-    
+
     return (
         <>
             <main>
