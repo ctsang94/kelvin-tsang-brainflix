@@ -10,12 +10,12 @@ const VideoDetails = ({activeVideo}) => {
             <section className='video__stats'>
                 <article className='video__stats--top'>
                     <h2 className='video__author'>By {activeVideo.channel}</h2>
-                    <img src='src\assets\Icons\views.svg' alt='views-icon'></img>
+                    <img src='../../assets/Icons/views.svg' alt='views-icon'></img>
                     <span className='video__views'>{activeVideo.views}</span>
                 </article>
                 <article className='video__stats--bottom'>
                     <span className='video__date'>{date.toLocaleDateString()}</span>
-                    <img src='src\assets\Icons\likes.svg' alt='likes-icon'></img>
+                    <img src='../../assets/Icons/likes.svg' alt='likes-icon'></img>
                     <span className='video__likes'>{activeVideo.likes}</span>
                 </article>
             </section>
